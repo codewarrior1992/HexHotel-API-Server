@@ -13,10 +13,12 @@ app.use(cors())
 const user = require('./routes/user.js');
 const room = require('./routes/room.js');
 const order = require('./routes/order.js');
+const newebpay = require('./routes/newebpay.js');
 
 app.use('/user', user);
 app.use('/room', room);
 app.use('/order', order);
+app.use('/newebpay', newebpay);
 
 // 參數要參考官網(隨時變動)
 mongoose.connect(process.env.DB, {
