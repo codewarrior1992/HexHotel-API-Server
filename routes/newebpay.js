@@ -27,8 +27,8 @@ const shaEncryptFun = (aesEncrypt) => {
 
 router.post('/get-encrypt-data',(req,res)=>{
 
-  const { total, desc, email } = req.body
-  const obj = { total, desc, email }
+  const { amt, desc, email } = req.body
+  const obj = { amt, desc, email }
 
   // 1. 請求字串
   const str = genDataChain(obj);
